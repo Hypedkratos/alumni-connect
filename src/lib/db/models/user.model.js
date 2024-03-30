@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
 import bcrypt from "bcryptjs";
 const usersSchema = new mongoose.Schema({
     name: {
@@ -60,7 +60,25 @@ const usersSchema = new mongoose.Schema({
     },
     curentJob: {
         type: String,
-    }
+    },
+    posts: [
+        {
+        type: Schema.Types.ObjectId,
+        ref: "Post",
+        },
+    ],
+    likes: [
+        {
+        type: Schema.Types.ObjectId,
+        ref: "Post",
+        },
+    ],
+    comments: [
+        {
+        type: Schema.Types.ObjectId,
+        ref: "Comment",
+        },
+    ],
 
 }, {
     timestamps: true

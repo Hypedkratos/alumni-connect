@@ -85,16 +85,6 @@ export const loginUser = async (user) => {
       };
       return JSON.parse(JSON.stringify(response));
     }
-
-    // if user is not verified might uncomment later on production 
-    // if (!existingUser.isVerified) {
-    //   const response = {
-    //     status: false,
-    //     message: "Please verify your email",
-    //   };
-    //   return JSON.parse(JSON.stringify(response));
-    // }
-    //create token
     const token = jwt.sign(
       {
         id: existingUser._id,
@@ -104,7 +94,7 @@ export const loginUser = async (user) => {
         phone: existingUser.phone,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "28d" }
+      { expiresIn: "7d" }
     );
 
     // if token is not created
