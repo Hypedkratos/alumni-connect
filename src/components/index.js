@@ -5,6 +5,10 @@ import Faq from "./ui/Faq";
 import Home1 from "./ui/Home1";
 import Checkroute from "./shared/Checkroute";
 import Crousel from "./ui/Crousel";
+import Sidebar from "./shared/Sidebar";
+import Topbar from "./shared/Topbar";
+import PostsCard from "./cards/PostsCard";
+import RigntSideBar from "./shared/RigntSideBar";
 export {
     Navbar,
     Footer,
@@ -13,6 +17,11 @@ export {
     TeamCard,
     Checkroute,
     Crousel,
+    Sidebar,
+    Topbar,
+    PostsCard,
+    RigntSideBar
+
     
     
 

@@ -3,12 +3,12 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 const Checkroute = () => {
   const path = usePathname();
-  const newPath = path.replace("/"," | ");
+  const newPath = path.replace("/", " | ");
   // console.log(newPath);
   return (
-    <>   
-    {/* <title> Alumni-Connect | {newPath} </title> */}
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <>
+      <title> Alumni-Connect | {newPath} </title>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
     </>
   )
 }

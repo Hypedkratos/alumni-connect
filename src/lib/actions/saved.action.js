@@ -9,7 +9,6 @@ export async function savePost(userId, postId) {
         await connectToDatabase()
     
         const saved = await Saved.findOne({ user: userId })
-    
         if (saved) {
             if (saved.post.includes(postId)) {
                 const index = saved.post.indexOf(postId)
