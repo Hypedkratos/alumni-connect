@@ -4,7 +4,7 @@ export function middleware(request) {
   const path = request.nextUrl.pathname
 
   const isPublicPath = path === "/login" 
-
+  
   const token = request.cookies.get("token")?.value || ""
 
   // if(token && path ==='/'){
